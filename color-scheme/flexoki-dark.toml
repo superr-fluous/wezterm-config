@@ -1,0 +1,71 @@
+# Custom theme based on Flexoki theme with #AD8301 being the primary
+# Flexoki: https://stephango.com/flexoki
+
+[colors]
+cursor_bg = "#AD8301" # yellow-600
+cursor_border = "#AD8301" # yellow-600
+cursor_fg = "#100F0F" # black
+selection_bg = "#282726" # base-900
+selection_fg = "#CECDC3" # base-200
+foreground = "#CECDC3" # base-200
+background = "#100F0F" # black
+split = "#AD8301" # yellow-600
+scrollbar_thumb = "#1C1B1A" # base-950
+compose_cursor = "#AF3029" # red-600
+
+ansi = [
+  "#100F0F", # black
+  "#AF3029", # red-600
+  "#66800B", # green-600
+  "#AD8301", # yellow-600
+  "#205EA6", # blue-600
+  "#5E409D", # purple-600
+  "#24837B", # cyan-600
+  "#CECDC3", # base-200
+]
+brights = [
+  "#575653", # base-700
+  "#D14D41", # red-400
+  "#879A39", # green-400
+  "#D0A215", # yellow-400
+  "#4385BE", # blue-400
+  "#8B7EC8", # purple-400
+  "#3AA99F", # cyan-400
+  "#FFFCF0", # bg
+]
+
+[colors.tab_bar]
+background = "#403E3C" # base-800
+
+[colors.tab_bar.active_tab]
+bg_color = "#AD8301" # yellow-600
+fg_color = "#282726" # base-900
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#100F0F"
+fg_color = "#6F6E69"
+intensity = "Half"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#100F0F" # black
+fg_color = "#6F6E69" # base-600
+intensity = "Normal"
+ 
+[colors.tab_bar.new_tab]
+bg_color = "#403E3C" # base-800
+fg_color = "#100F0F" # base-600
+intensity = "Bold"
+ 
+[colors.tab_bar.new_tab_hover]
+bg_color = "#403E3C" # black
+fg_color = "#AD8301" # yellow-600
+intensity = "Bold"
+
+[colors.indexed]
+
+[metadata]
+aliases = ["Flexoki Dark"]
+name = "Flexoki Dark"
+origin_url = "https://stephango.com/flexoki"
+wezterm_version = "Always"
