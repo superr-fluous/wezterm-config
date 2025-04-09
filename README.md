@@ -10,5 +10,5 @@
 
 ## TODO
 
-- Windows Terminal key bindings (splits mostly)
+- ~~Windows Terminal key bindings (splits mostly)~~
 - Key bindings for NeoVim config (Ctrl+Shift, Ctrl+Enter and such)
