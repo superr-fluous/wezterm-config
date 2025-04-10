@@ -18,12 +18,18 @@ return {
     {
       key = "c",
       mods = "CTRL",
-      action = wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
+      action = wezterm.action.Multiple({
+        wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
+        wezterm.action.SendKey({ key = "c", mods = "CTRL" }),
+      }),
     },
     {
       key = "c",
       mods = "CTRL|SHIFT",
-      action = wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
+      action = wezterm.action.Multiple({
+        wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
+        wezterm.action.SendKey({ key = "c", mods = "SHIFT|CTRL" }),
+      }),
     },
     { key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("Clipboard") },
     {
@@ -166,6 +172,26 @@ return {
       key = "F11",
       mods = "",
       action = wezterm.action.ToggleFullScreen,
+    },
+    {
+      key = "R",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.PromptInputLine({
+        description = "Enter new name for tab",
+        action = wezterm.action_callback(function(window, _, line)
+          -- line will be `nil` if user hits escape without entering anything
+          -- An empty string if user just hits enter
+          -- Or the actual line of text they wrote
+          if line then
+            window:active_tab():set_title(line)
+          end
+        end),
+      }),
+    },
+    {
+      key = "DownArrow",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.Hide,
     },
   },
 }
