@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 return {
-  key_map_preference = "Physical",
+  key_map_preference = "Mapped",
   -- could be useful, 'll leave it here for conveniance
   -- debug_key_events = true,
   keys = {
@@ -192,6 +192,22 @@ return {
       key = "DownArrow",
       mods = "CTRL|SHIFT",
       action = wezterm.action.Hide,
+    },
+    {
+      key = "Enter",
+      mods = "CTRL",
+      action = wezterm.action.SendString("\x1b[13;5u"),
+    },
+    -- add a loop with all alphabetical and numerical chars?
+    {
+      key = "Z",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SendKey({ key = "z", mods = "CTRL|SHIFT" }),
+    },
+    {
+      key = "S",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SendKey({ key = "s", mods = "CTRL|SHIFT" }),
     },
   },
 }
